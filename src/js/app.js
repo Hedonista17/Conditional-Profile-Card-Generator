@@ -33,14 +33,34 @@ function render(variables = {}) {
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
-          <h1>Lucy Boilett</h1>
-          <h2>Web Developer</h2>
-          <h3>Miami, USA</h3>
-          <ul class="position-right">
-            <li><a href="https://twitter.com/4geeksacademy"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/4geeksacademy"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/4geeksacademy"><i class="fab fa-instagram"></i></a></li>
+          <h1>${variables.name ? variables.name : "Name"} ${
+    variables.lastname ? variables.lastname : "LastName"
+  }</h1>
+          <h2>${variables.role ? variables.role : "Role"}</h2>
+          <h3>${variables.city ? variables.city : "City"} ${
+    variables.country ? variables.country : "Country"
+  }</h3>
+          <ul class="${variables.socialMediaPosition}">
+            <li><a href=${
+              variables.twitter ? variables.twitter : "#"
+            } style="color: ${
+    variables.twitter ? "white" : "grey"
+  };"><i class="fab fa-twitter"></i></a></li>
+            <li><a href=${
+              variables.github ? variables.github : "#"
+            } style ="color:${
+    variables.github !== "alesanchezr" ? "white" : "grey" //si la variable github es diferente a alessanchezr = grey ---- si es true =white
+  };"><i class="fab fa-github"></i></a></li>
+            <li><a href=${
+              variables.linkedin ? variables.linkedin : "#"
+            } style ="color:${
+    variables.linkedin ? "white" : "grey"
+  };"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href=${
+              variables.instagram ? variables.instagram : "#"
+            } style ="color:${
+    variables.instagram ? "white" : "grey"
+  };"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
     `;
@@ -54,9 +74,11 @@ window.onload = function() {
     // if includeCover is true the algorithm should
     includeCover: true,
     // this is the url of the image that will used as background for the profile cover
-    background: "https://images.unsplash.com/photo-1511974035430-5de47d3b95da",
+    background:
+      "https://pbs.twimg.com/media/DXwxhmRXkAACWJW?format=jpg&name=large",
     // this is the url for the profile avatar
-    avatarURL: "https://randomuser.me/api/portraits/women/42.jpg",
+    avatarURL:
+      "https://www.nacionrex.com/__export/1520273801951/sites/debate/img/2018/03/05/chloe_meme.jpg_423682103.jpg",
     // social media bar position (left or right)
     socialMediaPosition: "position-left",
     // social media usernames
