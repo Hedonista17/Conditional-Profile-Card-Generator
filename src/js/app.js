@@ -41,26 +41,29 @@ function render(variables = {}) {
     variables.country ? variables.country : "Country"
   }</h3>
           <ul class="${variables.socialMediaPosition}">
-            <li><a href=${
+            <li><a href="https://twitter.com/${
               variables.twitter ? variables.twitter : "#"
-            } style="color: ${
+            }" style="color: ${
     variables.twitter ? "white" : "grey"
   };"><i class="fab fa-twitter"></i></a></li>
-            <li><a href=${
+            <li><a href="https://github.com/${
               variables.github ? variables.github : "#"
-            } style ="color:${
-    variables.github !== "alesanchezr" ? "white" : "grey" //si la variable github es diferente a alessanchezr = grey ---- si es true =white
-  };"><i class="fab fa-github"></i></a></li>
-            <li><a href=${
+            }"
+             style ="color:${
+               variables.github !== "alesanchezr" ? "white" : "grey" //si la variable github es diferente a alessanchezr = grey ---- si es true =white
+             };"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://linkedin.com/${
               variables.linkedin ? variables.linkedin : "#"
-            } style ="color:${
-    variables.linkedin ? "white" : "grey"
-  };"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href=${
+            }"
+             style ="color:${
+               variables.linkedin ? "white" : "grey"
+             };"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://instagram.com/${
               variables.instagram ? variables.instagram : "#"
-            } style ="color:${
-    variables.instagram ? "white" : "grey"
-  };"><i class="fab fa-instagram"></i></a></li>
+            }"
+             style ="color:${
+               variables.instagram ? "white" : "grey"
+             };"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
     `;
